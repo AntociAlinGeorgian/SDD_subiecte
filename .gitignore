@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/DataStructures_Subiecte
+/Rezolvare_sub/03_06_2015_2
+/DataStructures/
+/DataStructures_Exercises/
+*.opendb

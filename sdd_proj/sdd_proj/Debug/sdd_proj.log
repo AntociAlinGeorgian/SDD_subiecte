@@ -1,0 +1,60 @@
+﻿  Source.cpp
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(73): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(75): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(160): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(163): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(165): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(167): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(191): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(215): warning C4551: function call missing argument list
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(234): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(247): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(289): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(300): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(304): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _itoa. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdlib.h(1316): note: see declaration of 'itoa'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(305): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(306): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(90): note: see declaration of 'strcat'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(312): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(315): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(318): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(320): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: see declaration of 'strcpy'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(343): warning C4473: 'scanf' : not enough arguments passed for format string
+  c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(343): note: placeholders and their parameters expect 1 variadic arguments, but 0 were provided
+  c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(343): note: the missing variadic argument 1 is required by format string '%d'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(343): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(347): warning C4473: 'scanf' : not enough arguments passed for format string
+  c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(347): note: placeholders and their parameters expect 1 variadic arguments, but 0 were provided
+  c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(347): note: the missing variadic argument 1 is required by format string '%d'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(347): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(356): warning C4473: 'scanf' : not enough arguments passed for format string
+  c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(356): note: placeholders and their parameters expect 1 variadic arguments, but 0 were provided
+  c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(356): note: the missing variadic argument 1 is required by format string '%d'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(356): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(388): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(397): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+c:\users\ibm_admin\documents\github\sdd_proj\sdd_proj\source.cpp(39): warning C4715: 'checkPrinterDuplicateID': not all control paths return a value
+  sdd_proj.vcxproj -> C:\Users\IBM_ADMIN\Documents\GitHub\sdd_proj\Debug\sdd_proj.exe
+  sdd_proj.vcxproj -> C:\Users\IBM_ADMIN\Documents\GitHub\sdd_proj\Debug\sdd_proj.pdb (Full PDB)
