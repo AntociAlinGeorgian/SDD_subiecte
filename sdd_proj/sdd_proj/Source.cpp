@@ -374,7 +374,7 @@ void adminMenu(nodeLSI*& printersList, ABC*& arboreFisiere) {
 		quitProgram();
 	}
 }
-
+ 
 void userMenu(nodeLSI*& printersList,ABC*& arboreFisiere) {
 	printf("== PRINTER USER ==\n\n");
 	printf("1. Scan document\n");
