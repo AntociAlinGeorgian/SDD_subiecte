@@ -79,8 +79,8 @@ void addPaper(nodeLSI*& printersList) {
 
 		nodeLSI* tmp = printersList;
 		while (tmp != NULL) {
-			if (strcmp(printersList->info->id, aux) == 0) {
-				printersList->info->paperCapacity += nrPapers;
+			if (strcmp(tmp->info->id, aux) == 0) {
+				tmp->info->paperCapacity += nrPapers;
 				ok = 1;
 			}
 			tmp = tmp->next;
@@ -109,7 +109,7 @@ struct ABC {
 };
 
 ABC* createNodeABC(Fisier* info) {
-	ABC* nod = new ABC;
+	ABC* nod = (ABC*)malloc(sizeof(ABC));
 	nod->infoFisier = info;
 	nod->left = NULL;
 	nod->right = NULL;
@@ -137,6 +137,7 @@ int papersNeeded(FILE* f) {
 	int ch;
 	int lines = 0;
 	int papersNr;
+	float rest;
 	int maxLinesPerPaper = 100;
 	while (!feof(f)) {
 		ch = fgetc(f);
@@ -145,7 +146,8 @@ int papersNeeded(FILE* f) {
 		}
 	}
 	papersNr = lines / maxLinesPerPaper;
-	if (papersNr == 0) {
+	rest = (float)(lines % maxLinesPerPaper);
+	if (rest > 0 || papersNr == 0) {
 		papersNr++;
 	}
 
@@ -157,7 +159,7 @@ void readFiles(ABC*& arbore) {
 	char fname[10];
 	Fisier* file = new Fisier;
 
-	system("cls");
+	//system("cls");
 	printf("== PRINTER USER ==\n");
 	printf("\nPath to file > ");
 	scanf("%s", &fpath);
@@ -201,6 +203,8 @@ void readFiles(ABC*& arbore) {
 		}
 		fclose(f);
 		free(source);
+		free(file->continutFisier);
+		free(file->numeFisier);
 		free(file);
 	}
 }
@@ -213,7 +217,7 @@ void printScannedFiles(ABC* listFiles) {
 		printScannedFiles(listFiles->right);
 	}
 	else {
-		system("cls");
+		//system("cls");
 		printf("No files scanned!\n");
 		userMenu();
 	}
