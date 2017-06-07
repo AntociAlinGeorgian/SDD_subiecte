@@ -1,0 +1,185 @@
+#include<iostream>
+#include<stdio.h>
+
+struct Client {
+	int idClient;
+	char* numeClient;
+	int bugetClient;
+	int durataProcedurii;
+	int costProceduri;
+};
+
+struct AVL {
+	Client* info;
+	int factorEchilibru;
+	AVL* stanga;
+	AVL* dreapta;
+};
+
+AVL* creareNod(Client* c) {
+	AVL* nod = new AVL;
+	nod->info = c;
+	nod->factorEchilibru = 0;
+	nod->dreapta = NULL;
+	nod->stanga = NULL;
+	return nod;
+}
+
+int maxim(int a, int b) {
+	return a > b ? a : b;
+}
+
+int inaltimeArbore(AVL* arbore) {
+	if (arbore) {
+		return 1 + maxim(inaltimeArbore(arbore->dreapta), inaltimeArbore(arbore->stanga));
+	}
+	else
+		return 0;
+}
+
+void calculFactorEchilibru(AVL* nod) {
+	if (nod) {
+		nod->factorEchilibru = inaltimeArbore(nod->dreapta) - inaltimeArbore(nod->stanga);
+	}
+}
+
+//rotiri simple
+AVL* rotireSimplaDreapta(AVL* pivot, AVL* fiuStanga) {
+	pivot->stanga = fiuStanga->dreapta;
+	fiuStanga->dreapta = pivot;
+	calculFactorEchilibru(pivot);
+	calculFactorEchilibru(fiuStanga);
+	return fiuStanga;
+}
+
+AVL* rotireSimplaStanga(AVL* pivot, AVL* fiuDreapta) {
+	pivot->dreapta = fiuDreapta->stanga;
+	fiuDreapta->stanga = pivot;
+	calculFactorEchilibru(pivot);
+	calculFactorEchilibru(fiuDreapta);
+	return fiuDreapta;
+}
+
+//rotiri duble
+AVL* rotireDublaDreapta(AVL* pivot, AVL* fiuDreapta) {
+	pivot->dreapta = rotireSimplaDreapta(fiuDreapta, fiuDreapta->stanga);
+	calculFactorEchilibru(pivot);
+
+	fiuDreapta = pivot->dreapta;
+	fiuDreapta = rotireSimplaStanga(pivot, fiuDreapta);
+	calculFactorEchilibru(fiuDreapta);
+
+	return fiuDreapta;
+}
+
+AVL* rotireDublaStanga(AVL* pivot, AVL* fiuStanga) {
+	pivot->stanga = rotireSimplaStanga(fiuStanga, fiuStanga->dreapta);
+	calculFactorEchilibru(pivot);
+
+	fiuStanga = pivot->stanga;
+	fiuStanga = rotireSimplaDreapta(pivot, fiuStanga);
+	calculFactorEchilibru(fiuStanga);
+	
+	return fiuStanga;
+}
+
+//echilibrare
+void echilibrare(AVL*& arbore) {
+	calculFactorEchilibru(arbore);
+
+	if (arbore->factorEchilibru == 2) {
+		if (arbore->dreapta->factorEchilibru == -1) {
+			arbore = rotireDublaDreapta(arbore, arbore->dreapta);
+		}
+		else if (arbore->dreapta->factorEchilibru == 1) {
+			arbore = rotireSimplaStanga(arbore, arbore->dreapta);
+		}
+	}
+	else if (arbore->factorEchilibru == -2) {
+		if (arbore->stanga->factorEchilibru == 1) {
+			arbore = rotireDublaStanga(arbore, arbore->stanga);
+		}
+		else if (arbore->stanga->factorEchilibru == -1) {
+			arbore = rotireSimplaDreapta(arbore, arbore->stanga);
+		}
+	}
+}
+
+void inserareNod(AVL*& arbore, Client* c) {
+	if (arbore == NULL) {
+		arbore = creareNod(c);
+	}
+	else {
+		if (arbore->info->idClient > c->idClient) {
+			inserareNod(arbore->stanga, c);
+		}
+		else if (arbore->info->idClient < c->idClient) {
+			inserareNod(arbore->dreapta, c);
+		}
+		else {
+			printf("Exista un client cu acest id!\n");
+		}
+	}
+	echilibrare(arbore);
+}
+
+void citireFisier(AVL*& arbore) {
+	FILE* f = fopen("Text.txt", "r");
+	if (f) {
+		while (!feof(f)) {
+			Client* c = new Client;
+			fscanf(f, "%d", &c->idClient);
+			char aux[20];
+			fscanf(f, "%s", &aux);
+			c->numeClient = (char*)malloc(strlen(aux) + 1);
+			strcpy(c->numeClient, aux);
+			fscanf(f, "%d", &c->bugetClient);
+			fscanf(f, "%d", &c->durataProcedurii);
+			fscanf(f, "%d", &c->costProceduri);
+			inserareNod(arbore, c);
+		}
+		fclose(f);
+	}
+}
+
+void afisarePreOrdine(AVL* arbore) {
+	if (arbore) {
+		printf("%d. %s, buget: %d, durata: %d, cost: %d\n",arbore->info->idClient,arbore->info->numeClient,arbore->info->bugetClient,arbore->info->durataProcedurii,arbore->info->costProceduri);
+		afisarePreOrdine(arbore->stanga);
+		afisarePreOrdine(arbore->dreapta);
+	}
+}
+
+int nrClientiDatornici = 0;
+
+void punct4_6(AVL* arbore) {
+	if (arbore) {
+		int sumaRamasa = 0;
+		int sumaDatorata = 0;
+		
+		if (arbore->info->bugetClient > arbore->info->costProceduri) {
+			sumaRamasa = arbore->info->bugetClient - arbore->info->costProceduri;
+			printf("Clientul %s nu si-a depasit bugetul si a ramas cu suma: %d\n", arbore->info->numeClient, sumaRamasa);
+		}
+		else if(arbore->info->bugetClient<arbore->info->costProceduri){
+			sumaDatorata = arbore->info->costProceduri - arbore->info->bugetClient;
+			printf("Clientul %s si-a depasit bugetul si a ramas cu datoria de: %d\n", arbore->info->numeClient, sumaDatorata);
+			nrClientiDatornici++;
+		}
+		else {
+			printf("Clientul s-a incadrat perfect in bugetul alocat.\n");
+		}
+		punct4_6(arbore->dreapta);
+		punct4_6(arbore->stanga);
+	}
+}
+
+void main() {
+	AVL* arbore = NULL;
+	citireFisier(arbore);
+	afisarePreOrdine(arbore);
+	printf("\n-------------------\n");
+	punct4_6(arbore);
+	printf("\n-------------------\n");
+	printf("Nr clienti datornici: %d\n", nrClientiDatornici);
+}
